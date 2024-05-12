@@ -16,47 +16,84 @@
 
     <main>
         <h1 class="flex justify-center text-3xl">鋼材重量を計算します。</h1>
+         
+            <h2 class="text-2xl">
+             <form class=material>
+              <fieldset>
+                <legend></legend>
+                <div>
+                  <input type="radio" id="mtChoice1" name="material" value= "st" checked />
+                  <label for="mtChoice1">鉄</label>
+            
+                  <input type="radio" id="mtChoice2" name="material" value= "ss" />
+                  <label for="mtChoice2">ステンレス</label>
+            
+                  <input type="radio" id="mtChoice3" name="material" value= "al" />
+                  <label for="mtChoice3">アルミ</label> の</h2>  
+                </div>
+
+              </fieldset>   
 
         <h2 class="text-2xl">   
-          <select name="keijou" id="keijou">
-            <option value="0">-</option>
-            <option value="1">平板</option>
-            <option value="2">角パイプ</option>
-            <option value="3">パイプ</option>
-            </select>
+          <select name="materialForm" id="mF">
+            <option value="sheet">平板</option>
+            <option value="squarePipe">角パイプ</option>
+            <option value="roundPipe">丸パイプ</option>
+            <option value="flatBar">フラットバー</option>
+            <option value="roundBar">丸棒</option>
+
+          </select>
             の重量計算</h2>
-     
+               <input type="button" value="設定" id="set" class="bg-indigo-500 hover:bg-indigo-700 font-hira text-white py-2 px-4 rounded m-2" >
+              
 
         <form action="">
-          <select name="material" id="mt">
-            <option value="4">-</option>
-            <option value="5">鉄</option>
-            <option value="6">ステンレス</option>
-            <option value="7">アルミ</option>
-                      
-          </select>
+          <div class="selectForm">
           <br>
+          <div class="t">
           板厚
           <input type="text" name="T" size="9" id="t" class="m-2">
           mm
-          <br>
+        </div>
+          <div class="φ"> <br>
+            外径
+            <input type="text" name="φ" size="9" id="φ" class="m-2">
+            mm
+          </div>
+         
+          <div class="x"> <br>
           縦(A)
           <input type="text" name="X" size="9" id="x" class="m-2">
           mm
-          <br>
+          </div>
+        
+          <div class="y">  <br>
           横(B)
           <input type="text" name="Y" size="9" id="y" class="m-2">
           mm
-          <br>
+        </div>
+         
+          <div class="l"> <br>
+            長さ(L)
+            <input type="text" name="L" size="9" id="l" class="m-2">
+            mm
+          </div>
+
+          </div>
+
           <div class="border-t-4 border-indigo-500"></div>
           
-          重量
-          <input type="text" name="Z" size="9" id="z" class="m-2">
-          kg
+
           <br>
           <input type="button" value="計算" id="result" class="bg-indigo-500 hover:bg-indigo-700 font-hira text-white py-2 px-4 rounded " >
           <input type="reset" value="やりなおし" id="reset" class="bg-indigo-500 hover:bg-indigo-700 font-hira text-white py-2 px-4 rounded ">
-          <input type="button" value="保存" id="save" class="bg-indigo-500 hover:bg-indigo-700 font-hira text-white py-2 px-4 rounded ">
+
+          <br>
+          <p>重量 <span class="result">0</span>kg</p>
+
+          <br>
+          <input type="button" value="一時保存" id="save" class="bg-indigo-500 hover:bg-indigo-700 font-hira text-white py-2 px-4 rounded ">
+
         </form>
          
 
