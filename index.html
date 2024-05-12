@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+     <link rel="stylesheet" href="./css/output.css">
+    <title>鋼材重量計算ツール</title>
+</head>
+
+<body class="bg-pink-100">
+
+    <header>
+        <h1 class="flex justify-center text-5xl p-5">鋼材重量計算ツール</h1>
+    </header>
+
+    <main>
+        <h1 class="flex justify-center text-3xl">鋼材重量を計算します。</h1>
+
+        <h2 class="text-2xl">   
+          <select name="keijou" id="keijou">
+            <option value="0">-</option>
+            <option value="1">平板</option>
+            <option value="2">角パイプ</option>
+            <option value="3">パイプ</option>
+            </select>
+            の重量計算</h2>
+     
+
+        <form action="">
+          <select name="material" id="mt">
+            <option value="4">-</option>
+            <option value="5">鉄</option>
+            <option value="6">ステンレス</option>
+            <option value="7">アルミ</option>
+                      
+          </select>
+          <br>
+          板厚
+          <input type="text" name="T" size="9" id="t" class="m-2">
+          mm
+          <br>
+          縦(A)
+          <input type="text" name="X" size="9" id="x" class="m-2">
+          mm
+          <br>
+          横(B)
+          <input type="text" name="Y" size="9" id="y" class="m-2">
+          mm
+          <br>
+          <div class="border-t-4 border-indigo-500"></div>
+          
+          重量
+          <input type="text" name="Z" size="9" id="z" class="m-2">
+          kg
+          <br>
+          <input type="button" value="計算" id="result" class="bg-indigo-500 hover:bg-indigo-700 font-hira text-white py-2 px-4 rounded " >
+          <input type="reset" value="やりなおし" id="reset" class="bg-indigo-500 hover:bg-indigo-700 font-hira text-white py-2 px-4 rounded ">
+          <input type="button" value="保存" id="save" class="bg-indigo-500 hover:bg-indigo-700 font-hira text-white py-2 px-4 rounded ">
+        </form>
+         
+
+
+    </main>
+
+    <footer></footer>
+
+    
+    <!-- jqueryの読み込み（記述）が絶対に先！！！ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- js/test.jsは絶対にjqueryの後 -->
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
