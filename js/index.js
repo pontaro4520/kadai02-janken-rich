@@ -8,6 +8,8 @@ $('#set').on ('click', function(){
     console.log(mF); // 出力：ABC
     $(".selectForm").show();
   
+
+    // 必要なものを表示
     if(mF === "sheet"){
         
         $(".φ, .l").hide();
@@ -19,12 +21,14 @@ $('#set').on ('click', function(){
         $(".x, .y").hide();
     }else if (mF === "flatBar"){
         
-        $(".φ").hide();
+        $(".t, .φ").hide();
     }else if (mF === "roundBar"){
         
-        $(".x, .y").hide();
+        $(".t, .x, .y").hide();
     }
 
+
+    
 })
 
 // 計算結果の表示
@@ -56,26 +60,26 @@ $('#result') .on('click', function(){
         hiju = alhiju
     }
 
-
+    // 平板
     if(mF === "sheet"){
         result = t * x * y * hiju / 1000000
         
     }else if (mF === "squarePipe"){
-       
-        $(".φ").hide();
+        result = (((x * y) - (( x - 2*t ) * ( y - 2 * t))) * l * hiju / 1000000)
+
     }else if (mF === "roundPipe"){
+        result = ((φ*t)-(t*t))*3.14*l*hiju/1000000
         
-        $(".x, .y").hide();
     }else if (mF === "flatBar"){
-        
-        $(".φ").hide();
+        result = x * y * l * hiju /1000000
+               
     }else if (mF === "roundBar"){
-        
-        $(".x, .y").hide();
+        result = φ/2 * φ/2 * 3.14 * l * hiju /1000000
     }
     console.log(result)
 
     $('.result').html(result);
+    
 
 })   
 
